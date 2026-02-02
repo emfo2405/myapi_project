@@ -8,12 +8,14 @@ class Todo(models.Model):
         IN_PROGRESS = "IN_PROGRESS", "Pågående"
         FINISHED = "FINISHED", "Avklarad"
 
-    title = models.CharField(max_length=50)
-    description = models.TextField()
+    title = models.CharField(max_length=50, blank=False, null=False)
+    description = models.TextField(blank=True, null=True)
     status = models.CharField(
         max_length=15,
         choices=Status.choices,
-        default=Status.NOT_STARTED
+        default=Status.NOT_STARTED,
+        blank=False,
+        null=False
     )
 
     def __str__(self):

@@ -15,3 +15,6 @@ class Todo(models.Model):
         choices=Status.choices,
         default=Status.NOT_STARTED
     )
+
+    def __str__(self):
+        return self.title

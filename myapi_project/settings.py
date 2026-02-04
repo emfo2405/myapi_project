@@ -122,7 +122,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173"
+    "http://localhost:5173",
+    "https://enchanting-tarsier-de085c.netlify.app/"
 ]
 
 SECURE_SSL_REDIRECT = False
